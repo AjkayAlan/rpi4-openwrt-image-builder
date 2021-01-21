@@ -28,6 +28,6 @@ jobs:
       - name: Upload Built Images
         uses: actions/upload-artifact@v2
         with:
-          name: dist-without-markdown
+          name: target
           path: |
-            target
+            target/*/bin/**
