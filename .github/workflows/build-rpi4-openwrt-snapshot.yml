@@ -2,7 +2,7 @@ name: Build RPI4 OpenWrt Snapshot
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     - cron: "0 11 * * 0"
 defaults:
