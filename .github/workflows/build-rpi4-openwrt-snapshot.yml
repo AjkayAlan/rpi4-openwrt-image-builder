@@ -1,0 +1,22 @@
+name: Build RPI4 OpenWrt Snapshot
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 11 * * 0"
+defaults:
+  run:
+    shell: bash
+jobs:
+  build-rpi4-openwrt-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Update Agent
+        run: .github/scripts/setup/update-agent.sh
+      - name: Install Build System Dependencies
+        run: .github/scripts/setup/install-buildsystem-dependencies.sh
+      - name: Install Image Builder Dependencies
+        run: .github/scripts/setup/install-imagebuilder-dependencies.sh
