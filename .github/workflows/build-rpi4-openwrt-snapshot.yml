@@ -1,9 +1,6 @@
 name: Build RPI4 OpenWrt Snapshot
 on:
   push:
-    paths-ignore:
-      - 'README.md'
-      - 'LICENSE'
     branches:
       - main
   schedule:
