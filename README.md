@@ -68,3 +68,4 @@ echo 1 > /sys/class/net/eth0/queues/rx-0/rps_cpus
 
 Make a config YAML and use it
 Flatten out artifact, too many levels
+Publish via releases
