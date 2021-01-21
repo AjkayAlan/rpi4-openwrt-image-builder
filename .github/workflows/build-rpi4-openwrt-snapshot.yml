@@ -21,3 +21,13 @@ jobs:
         run: .github/scripts/setup/install-buildsystem-dependencies.sh
       - name: Install Image Builder Dependencies
         run: .github/scripts/setup/install-imagebuilder-dependencies.sh
+      - name: Get RPI4 Image Builder
+        run: .github/scripts/setup/get-rpi4-imagebuilder.sh
+      - name: Build RPI4 Image
+        run: .github/scripts/build/build-rpi4-image.sh
+      - name: Upload Built Images
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist-without-markdown
+          path: |
+            target
