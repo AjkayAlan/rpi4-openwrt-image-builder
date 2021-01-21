@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+      - name: Allow Script Execution
+        run: |
+          chmod +x .github/scripts/**/*.sh
       - name: Update Agent
         run: .github/scripts/setup/update-agent.sh
       - name: Install Build System Dependencies
